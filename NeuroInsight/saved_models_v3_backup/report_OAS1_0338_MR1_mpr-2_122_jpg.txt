@@ -1,0 +1,13 @@
+
+=============================================
+   CLINICAL DECISION SUPPORT REPORT
+=============================================
+Prediction: VeryMildDemented
+Confidence: 64.72%
+Disease Stage: Early Alzheimer's Progression (Stage 1 of 4)
+
+AI Explanation: Highlighted regions (see Grad-CAM) indicate structural
+  patterns associated with this classification.
+
+Recommendation: Consult a neurologist for comprehensive clinical evaluation.
+=============================================

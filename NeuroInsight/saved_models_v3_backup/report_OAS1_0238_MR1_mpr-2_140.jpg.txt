@@ -1,0 +1,3 @@
+Image: /content/NeuroInsight/cleaned_dataset/VeryMildDemented/OAS1_0238_MR1_mpr-2_140.jpg
+Predicted class: NonDemented
+Confidence: 93.48%

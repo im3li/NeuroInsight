@@ -1,0 +1,3 @@
+Image: /content/NeuroInsight/cleaned_dataset/VeryMildDemented/verymildDem1072.jpg
+Predicted class: EarlyDemented
+Confidence: 77.14%

@@ -1,0 +1,3 @@
+Image: /content/NeuroInsight/cleaned_dataset/NonDemented/OAS1_0192_MR1_mpr-3_118.jpg
+Predicted class: NonDemented
+Confidence: 79.76%

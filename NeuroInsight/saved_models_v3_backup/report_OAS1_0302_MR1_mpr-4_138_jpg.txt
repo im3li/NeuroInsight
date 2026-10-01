@@ -1,0 +1,13 @@
+
+=============================================
+   CLINICAL DECISION SUPPORT REPORT
+=============================================
+Prediction: NonDemented
+Confidence: 79.99%
+Disease Stage: No significant signs detected
+
+AI Explanation: Highlighted regions (see Grad-CAM) indicate structural
+  patterns associated with this classification.
+
+Recommendation: No immediate concern; routine monitoring advised.
+=============================================

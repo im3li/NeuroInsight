@@ -1,0 +1,30 @@
+============================================================
+ALZHEIMER'S CLASSIFICATION – FINAL RESULTS
+============================================================
+Model: ResNet50 (3 classes: ModerateDemented, NonDemented, EarlyDemented)
+Test Accuracy: 90.0%
+Optimal threshold for NonDemented: 0.3232
+
+Classification Report:
+                  precision    recall  f1-score   support
+
+ModerateDemented       0.99      0.99      0.99       731
+     NonDemented       0.81      0.80      0.80       731
+   EarlyDemented       0.90      0.90      0.90      1462
+
+        accuracy                           0.90      2924
+       macro avg       0.90      0.90      0.90      2924
+    weighted avg       0.90      0.90      0.90      2924
+
+Confusion Matrix:
+[[ 724    0    7]
+ [   5  585  141]
+ [   5  138 1319]]
+
+Files saved in this folder:
+- confusion_matrix_heatmap.png
+- roc_curves.png
+- misclassified_samples.csv
+- gradcam_*.png (one per class sample)
+- reports/*.txt
+============================================================

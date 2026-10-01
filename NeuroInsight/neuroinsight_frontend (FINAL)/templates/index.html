@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NeuroInsight — Scan Analysis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="scanline-bg"></div>
+
+<header class="site-header">
+  <div class="brand">
+    <span class="brand-mark">N</span>
+    <span class="brand-name">NeuroInsight</span>
+  </div>
+  <span class="header-tag">MRI Analysis · Research Prototype</span>
+</header>
+
+<div class="disclaimer-banner">
+  <strong>Not a diagnostic device.</strong> This is a research/educational prototype and does not replace professional medical evaluation. Always consult a qualified clinician.
+</div>
+
+<main>
+
+  <section class="hero" id="upload-section">
+    <div class="hero-copy">
+      <p class="eyebrow">Upload a brain MRI scan</p>
+      <h1>See what the model sees.</h1>
+      <p class="hero-sub">Drop a scan below. The model classifies it, then shows you exactly which regions drove that decision — no black box.</p>
+    </div>
+
+    <div class="upload-zone" id="upload-zone">
+      <input type="file" id="file-input" accept="image/*" hidden>
+      <div class="upload-inner" id="upload-inner">
+        <svg class="upload-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 16V4M12 4L7 9M12 4L17 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M4 16V18C4 19.1046 4.89543 20 6 20H18C19.1046 20 20 19.1046 20 18V16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <p class="upload-label">Drag a scan here, or click to browse</p>
+        <p class="upload-hint">JPG or PNG</p>
+      </div>
+      <img id="preview-img" class="preview-img" hidden>
+    </div>
+
+    <button id="analyze-btn" class="analyze-btn" disabled>Analyze Scan</button>
+  </section>
+
+  <section class="results" id="results-section" hidden>
+
+    <div class="results-grid">
+
+      <div class="panel scan-panel">
+        <p class="panel-label">Scan Analysis</p>
+        <p class="panel-hint">Drag the slider to reveal the model's focus areas</p>
+        <div class="compare-slider" id="compare-slider">
+          <img id="result-original" class="compare-img compare-base" alt="Original scan">
+          <div class="compare-overlay-wrap" id="compare-overlay-wrap">
+            <img id="result-gradcam" class="compare-img compare-overlay" alt="Grad-CAM overlay">
+          </div>
+          <div class="compare-handle" id="compare-handle">
+            <div class="compare-handle-grip"></div>
+          </div>
+        </div>
+        <div class="slider-labels">
+          <span>Original</span>
+          <span>Model Focus</span>
+        </div>
+        <div class="intensity-control">
+          <label for="intensity-slider">Overlay Intensity</label>
+          <input type="range" id="intensity-slider" min="0" max="100" value="100">
+          <span id="intensity-value">100%</span>
+        </div>
+      </div>
+
+      <div class="panel verdict-panel">
+        <p class="panel-label">Classification</p>
+        <div class="verdict" id="verdict-block">
+          <span class="severity-dot" id="severity-dot"></span>
+          <h2 id="prediction-name">—</h2>
+          <div class="confidence-ring">
+            <svg viewBox="0 0 120 120" class="ring-svg">
+              <circle cx="60" cy="60" r="54" class="ring-bg"/>
+              <circle cx="60" cy="60" r="54" class="ring-fg" id="confidence-ring" />
+            </svg>
+            <span class="confidence-value" id="confidence-value">0%</span>
+          </div>
+          <p class="confidence-label">confidence</p>
+        </div>
+
+        <div class="prob-bars" id="prob-bars"></div>
+      </div>
+
+    </div>
+
+    <div class="panel report-panel">
+      <div class="report-header">
+        <p class="panel-label">Decision Support Report</p>
+        <span class="report-id" id="report-id"></span>
+      </div>
+      <div class="report-row">
+        <span class="report-key">Finding</span>
+        <p class="report-value" id="report-description">—</p>
+      </div>
+      <div class="report-row">
+        <span class="report-key">Recommendation</span>
+        <p class="report-value" id="report-recommendation">—</p>
+      </div>
+
+      <details class="uncertainty-details">
+        <summary>How was this decision made?</summary>
+        <p class="uncertainty-text" id="uncertainty-text">—</p>
+      </details>
+
+      <div class="report-actions">
+        <button class="copy-btn" id="copy-btn">📋 Copy Summary</button>
+        <span class="copy-confirm" id="copy-confirm" hidden>Copied</span>
+      </div>
+    </div>
+
+    <button class="analyze-btn secondary" id="reset-btn">Analyze Another Scan</button>
+
+  </section>
+
+  <div class="loading-overlay" id="loading-overlay" hidden>
+    <div class="loading-spinner"></div>
+    <p id="loading-text">Analyzing scan…</p>
+  </div>
+
+</main>
+
+<footer>
+  <p>NeuroInsight is a research prototype built for educational purposes. Model predictions are not a substitute for clinical diagnosis.</p>
+</footer>
+
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

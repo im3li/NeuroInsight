@@ -1,0 +1,13 @@
+
+=============================================
+   CLINICAL DECISION SUPPORT REPORT
+=============================================
+Prediction: ModerateDemented
+Confidence: 71.11%
+Disease Stage: Moderate Alzheimer's Progression (Stage 3 of 4)
+
+AI Explanation: Highlighted regions (see Grad-CAM) indicate structural
+  patterns associated with this classification.
+
+Recommendation: Consult a neurologist for comprehensive clinical evaluation.
+=============================================

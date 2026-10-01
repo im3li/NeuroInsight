@@ -1,0 +1,13 @@
+
+=============================================
+   CLINICAL DECISION SUPPORT REPORT
+=============================================
+Prediction: MildDemented
+Confidence: 74.87%
+Disease Stage: Mild Alzheimer's Progression (Stage 2 of 4)
+
+AI Explanation: Highlighted regions (see Grad-CAM) indicate structural
+  patterns associated with this classification.
+
+Recommendation: Consult a neurologist for comprehensive clinical evaluation.
+=============================================

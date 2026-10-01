@@ -1,0 +1,3 @@
+Image: /content/NeuroInsight/cleaned_dataset/MildDemented/OAS1_0122_MR1_mpr-4_156.jpg
+Predicted class: EarlyDemented
+Confidence: 95.68%

@@ -1,0 +1,10 @@
+MATHEMATICAL FORMULAS
+========================================
+Grad-CAM:
+α_k^c = (1/Z) * Σ_i Σ_j (∂y^c / ∂A_{ij}^k)
+L_GradCAM^c = ReLU( Σ_k α_k^c * A^k )
+
+Guided Grad-CAM:
+L_GuidedGradCAM^c = ReLU( ∂y^c / ∂I ) ⊙ L_GradCAM^c
+
+Confidence = max( softmax(logits) )

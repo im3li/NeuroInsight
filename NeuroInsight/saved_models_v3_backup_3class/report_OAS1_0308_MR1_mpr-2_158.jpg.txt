@@ -1,0 +1,3 @@
+Image: /content/NeuroInsight/cleaned_dataset/ModerateDemented/OAS1_0308_MR1_mpr-2_158.jpg
+Predicted class: ModerateDemented
+Confidence: 99.57%

@@ -1,0 +1,3 @@
+Image: /content/NeuroInsight/cleaned_dataset/VeryMildDemented/OAS1_0179_MR1_mpr-2_160.jpg
+Predicted class: VeryMildDemented
+Confidence: 76.71%
