@@ -1,12 +1,12 @@
-*.keras  *.csv  Datasets/  cleaned_dataset/ 
-*.keras 
-*.csv 
-Datasets/ 
-cleaned_dataset/ 
-*.keras 
-Datasets/ 
-cleaned_dataset/ 
-*.keras 
-*.csv 
-Datasets/ 
-cleaned_dataset/ 
+# Ignore datasets and large data files
+*.csv
+Datasets/
+cleaned_dataset/
+
+# Ignore trained model files
+*.keras
+
+# Ignore virtual environments (don't forget to add this!)
+venv/
+.venv/
+env/
